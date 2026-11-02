@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/api.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './editprofile.component.html',
   styleUrl: './editprofile.component.css'
 })
-export class EditprofileComponent {
+export class EditprofileComponent implements OnInit {
 
 user: any = null;
 error: any = null;
@@ -42,8 +42,8 @@ error: any = null;
 
   // Handle account deletion 
   handleDeleteProfile(): void {
-   if(
-    !window.confirm(
+   if (
+     !window.confirm(
       'Are you sure you want to delete your account? If you delete your account, you will lose access to your profile and all associated data.'
     )
    ) {
@@ -52,11 +52,11 @@ error: any = null;
 
   this.apiService.deleteAccount().subscribe({
     next: () => {
-      this.router.navigate(['/signup']); // Redirect to home or login page after deletion
+      this.router.navigate(['/login']); // Redirect to home or login page after deletion
     },
     error: (err) => {
-      this.showError(err?.error?.message || 'Error deleting account');
-    },
+      this.showError(err?.error?.message || 'Error Deleting account');
+    }, 
   });
  }
 

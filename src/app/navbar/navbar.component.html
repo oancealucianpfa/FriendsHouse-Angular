@@ -9,9 +9,9 @@
 
         <li *ngIf="isCustomer"><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
         <li *ngIf="isAdmin"><a routerLink="/admin" routerLinkActive="active">Admin</a></li>
-        <li *ngIf="!isAuthenticated"><a routerLink="/login" routerLinkActive="active">Login</a></li>
-        <li *ngIf="!isAuthenticated"><a routerLink="/register" routerLinkActive="active">Register</a></li>
+        <li *ngIf="!isAuthemticated"><a routerLink="/login" routerLinkActive="active">Login</a></li>
+        <li *ngIf="!isAuthemticated"><a routerLink="/register" routerLinkActive="active">Register</a></li>
 
-        <li *ngIf="isAuthenticated" (click)="handleLogout()">Logout</li>
+        <li *ngIf="isAuthemticated" (click)="handleLogout()">Logout</li>
     </ul>
 </nav>

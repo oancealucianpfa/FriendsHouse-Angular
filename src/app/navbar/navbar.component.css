@@ -9,12 +9,14 @@ nav {
     font-size: 20px;
 }
 
+
 .brand a {
-font-size: 24px;
-font-weight: bold;
-color: #007f86;
-text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #007F86;
+    text-decoration: none;
 }
+
 
 ul {
     list-style: none;
@@ -25,9 +27,11 @@ ul {
     flex-wrap: wrap;
 }
 
+
 li {
     margin-left: 20px;
 }
+
 
 li a {
     text-decoration: none;
@@ -35,10 +39,12 @@ li a {
     transition: color 0.5s;
 }
 
+
 li a:hover {
     color: #FF007F;
-    color: #FF7F50
+    color: #FF7F50;
 }
+
 
 li a.active {
     color: #FF7F50;

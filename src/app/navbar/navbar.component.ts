@@ -3,6 +3,7 @@ import { ApiService } from '../service/api.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 
+
 @Component({
   selector: 'app-navbar',
   imports: [CommonModule, RouterLink, RouterLinkActive],
@@ -13,7 +14,7 @@ export class NavbarComponent {
 
   constructor(private router: Router, private apiService: ApiService){}
 
-  get isAuthenticated():boolean{
+  get isAuthemticated():boolean{
     return this.apiService.isAuthenticated();
   }
 
@@ -32,6 +33,5 @@ export class NavbarComponent {
       this.router.navigate(['/home'])
     }
   }
-
 
 }
