@@ -43,7 +43,7 @@ export class PaymentpageComponent {
 
     //load andn initialize the strip.js
     this.stripe = await loadStripe(
-      'pk_test_51QUUt8HB3OLSUETB41PkCNVZvXQdjyIJx4n7u9EHrMUH0j3R5VAJE76l1fnwQbC3OJlkPwQDIi0KwXGjdU1phB3s00ZJEZOlbv'
+      'pk_test_51TWHnh0cx8cuCB84HDNF1ZSu7NRNkKTVsXpGauQ1bFU8jXsxOe7LUJTzZ0PuaEcFWshpOHfiq6ljDgtBFmW0WM8200J64X48ui'
     );
 
     if (this.stripe) {
